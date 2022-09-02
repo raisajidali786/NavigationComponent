@@ -12,6 +12,12 @@
         <action
             android:id="@+id/action_navHostFragment_to_fragmentA"
             app:destination="@id/fragmentA" />
+        <action
+            android:id="@+id/action_navHostFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_navHostFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentA"
@@ -27,4 +33,14 @@
         android:name="com.rsa.navigation.ui.fragments.FragmentB"
         android:label="fragment_b"
         tools:layout="@layout/fragment_b" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.rsa.navigation.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.rsa.navigation.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
 </navigation>

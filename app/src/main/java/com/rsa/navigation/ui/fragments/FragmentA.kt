@@ -1,6 +1,8 @@
 package com.rsa.navigation.ui.fragments
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,7 +25,8 @@ class FragmentA : Fragment() {
             it.findNavController().navigate(R.id.action_fragmentA_to_fragmentB)
         }
         view.findViewById<Button>(R.id.btnSendDataToFragB).setOnClickListener {
-            val bundle = bundleOf("data" to "This is data(By Bundle)")
+            val bundle = bundleOf()
+            bundle.putString("data","This is data(By Bundle)")
             it.findNavController().navigate(R.id.action_fragmentA_to_fragmentB, bundle)
         }
         return view
