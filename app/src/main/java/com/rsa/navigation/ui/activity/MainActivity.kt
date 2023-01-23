@@ -28,24 +28,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun itemClickHandler() {
-        navigation.setNavigationItemSelectedListener { item ->
-            when(item.itemId){
-                R.id.home ->{
-                    drawerLayout.closeDrawer(Gravity.LEFT)
-                }
-                R.id.contact ->{
-                    drawerLayout.closeDrawer(Gravity.LEFT)
-                    navController.navigate(R.id.action_navHostFragment_to_contactFragment)
-                }
-                R.id.gallery ->{
-                    drawerLayout.closeDrawer(Gravity.LEFT)
-                    navController.navigate(R.id.action_navHostFragment_to_galleryFragment)
-                }
-            }
-            item.onNavDestinationSelected(
-                navController
-            )
-        }
+//        navigation.setNavigationItemSelectedListener { item ->
+//            when(item.itemId){
+//                R.id.home ->{
+//                    drawerLayout.closeDrawer(Gravity.LEFT)
+//                }
+//                R.id.contact ->{
+//                    drawerLayout.closeDrawer(Gravity.LEFT)
+//                    navController.navigate(R.id.action_navHostFragment_to_contactFragment)
+//                }
+//                R.id.gallery ->{
+//                    drawerLayout.closeDrawer(Gravity.LEFT)
+//                    navController.navigate(R.id.action_navHostFragment_to_galleryFragment)
+//                }
+//            }
+//            item.onNavDestinationSelected(
+//                navController
+//            )
+//        }
     }
 
     private fun inIt() {

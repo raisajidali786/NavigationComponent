@@ -4,27 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".ui.fragments.FragmentA">
+    android:gravity="center_horizontal"
+    tools:context=".ui.fragments.ChooseReceiverFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/etReceiverName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="I am Fragment A"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="20dp"/>
+        android:layout_margin="20dp"
+        android:hint="Enter Receiver Name.."
+        android:inputType="text"
+        android:maxLines="1" />
 
     <Button
-        android:id="@+id/btnGotoFragB"
+        android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Fragment(B)"/>
+        android:text="next" />
 
     <Button
-        android:id="@+id/btnSendDataToFragB"
+        android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send Data to Fragment(B)"/>
-
+        android:text="cancel" />
 </LinearLayout>

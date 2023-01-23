@@ -5,23 +5,25 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ui.fragments.NavHostFragment">
+    android:layout_marginHorizontal="20dp"
+    tools:context=".ui.fragments.HomeFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nav Host Fragment"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/btnGotoFragA"
+        android:id="@+id/btnSendMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Fragment(A)"
-        android:layout_gravity="center"/>
+        android:text="Send money" />
 
+    <Button
+        android:id="@+id/btnViewBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Balance" />
 
+    <Button
+        android:id="@+id/btnViewTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Transactions" />
 </LinearLayout>
