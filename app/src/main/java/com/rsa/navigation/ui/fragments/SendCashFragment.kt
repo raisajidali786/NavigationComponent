@@ -12,12 +12,19 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.rsa.navigation.R
+import com.rsa.navigation.ui.utils.TestData
 import kotlinx.android.synthetic.main.fragment_send_cash.*
 
 class SendCashFragment : Fragment(R.layout.fragment_send_cash) {
     private val args: SendCashFragmentArgs by navArgs()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        etAmount.setText(TestData.defaultAmount.toString())
+        TestData.defaultAmount.observe(viewLifecycleOwner){
+            etAmount.setText(it.toString())
+        }
+
         val receiverName = args.receiverName
         receiver_name.text = "Send cash to $receiverName"
         btnSend.setOnClickListener {

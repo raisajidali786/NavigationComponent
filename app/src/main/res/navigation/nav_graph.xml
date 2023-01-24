@@ -58,7 +58,7 @@
         android:id="@+id/sendCashFragment"
         android:name="com.rsa.navigation.ui.fragments.SendCashFragment"
         android:label="Send Cash - {receiverName}"
-        tools:layout="@layout/fragment_send_cash" >
+        tools:layout="@layout/fragment_send_cash">
         <argument
             android:name="receiverName"
             app:argType="string" />
@@ -71,15 +71,18 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/navHostFragment"
-            app:popUpToInclusive="true"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popUpToInclusive="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="www.codewsa.com/{receiverName}" />
     </fragment>
     <dialog
         android:id="@+id/confirmDialogFragment"
         android:name="com.rsa.navigation.ui.fragments.ConfirmDialogFragment"
         android:label="fragment_confirm_dialog"
-        tools:layout="@layout/fragment_confirm_dialog" >
+        tools:layout="@layout/fragment_confirm_dialog">
         <argument
             android:name="receiverName"
             app:argType="string" />
@@ -87,4 +90,26 @@
             android:name="amount"
             app:argType="long" />
     </dialog>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.rsa.navigation.ui.fragments.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.rsa.navigation.ui.fragments.AboutAppFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about_app" />
+    <action
+        android:id="@+id/action_global_aboutAppFragment"
+        app:destination="@id/aboutAppFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.rsa.navigation.ui.fragments.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
 </navigation>
